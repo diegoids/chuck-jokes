@@ -6,6 +6,8 @@
   color: var(--white);
   padding: 16px;
   transition: all .3s ease-in;
+  text-transform: capitalize;
+  font-weight: 700;
   
   &:hover {
     background-color: var(--secondary);

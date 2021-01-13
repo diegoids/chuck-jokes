@@ -1,20 +1,20 @@
 import React  from 'react';
 
-import Button from '../../shared/Button/Button';
-
 import ChuckApproves from '../../assets/chuck-approves.png';
 import './ChuckJoke.style.scss';
 
-const ChuckJoke: React.FC = () => {
+interface Props {
+  joke: string[]
+}
+
+const ChuckJoke: React.FC<Props> = ({ joke }) => {
   return (
     <section className="app-chuck-joke">
       <img className="app-chuck-joke__approves" src={ ChuckApproves } alt="Yes" />
 
       <blockquote className="app-chuck-joke__quote">
-        <strong><i>ola ola ola</i></strong>
+        <strong><i>{ joke }</i></strong>
       </blockquote>
-
-      <Button label={ 'Another one...' } layout={'secundary'} />
     </section>
   );
 };

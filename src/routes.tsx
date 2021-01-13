@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import Loading from './shared/Loading/Loading';
 import {
   BrowserRouter as Router,
   Switch, 
@@ -15,7 +16,7 @@ const Joke = lazy(() => import('./views/joke/Joke'));
 
 const Routes = () => (
   <Router>
-    <Suspense fallback={(<div>loading</div>)}>
+    <Suspense fallback={(<Loading />)}>
       <Switch>
         <Route path={ ROUTES.HOME } exact component={ Home } />
         <Route path={ `${ROUTES.JOKE}/:category` } exact component={ Joke } />
