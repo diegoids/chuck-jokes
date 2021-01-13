@@ -1,3 +1,12 @@
 .app-nav-bar {
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-size: medium;
+
+  &__category {
+    font-weight: 700;
+    color: var(--white);
+    text-align: right;
+  }
 }

@@ -1,3 +1,40 @@
 .app-button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 16px;
+  transition: all .3s ease-in;
   
+  &:hover {
+    background-color: var(--secondary);
+  }
+
+  &--secundary {
+    background-color: var(--terciary);
+
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+
+  &--back {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    img {
+      display: inline-block;
+      height: 100%;
+      margin-right: 5px;
+    }
+  }
 }

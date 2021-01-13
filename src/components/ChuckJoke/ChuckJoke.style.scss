@@ -1,3 +1,17 @@
+@import "../../config/styles/helpers/mixins";
+
 .app-chuck-joke {
-  
+  max-width: 500px;
+  margin: 70px auto 0;
+
+  &__approves {
+    width: 100%;
+    margin-bottom: -5px;
+  }
+
+  &__quote {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 10px;
+  }
 }

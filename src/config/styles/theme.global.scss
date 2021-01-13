@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+@import "helpers/colors";
 
 body * {
   font-weight: 400;
@@ -7,6 +8,7 @@ body * {
   -moz-osx-font-smoothing: grayscal;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
+  color: var(--primary);
 }
 
 a {
@@ -34,7 +36,6 @@ ol, ul {
   list-style: none;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+html, body, #root, main {
+  background-color: var(--background);
 }
