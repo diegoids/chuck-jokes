@@ -1,8 +1,7 @@
 import React  from 'react';
 
-import Wrapper        from '../../shared/Wrapper/Wrapper';
-import Intro          from '../../components/Intro/Intro';
-import CategoriesList from '../../components/CategoriesList/CategoriesList';
+import Wrapper from '../../shared/Wrapper/Wrapper';
+import Intro   from '../../components/Intro/Intro';
 
 const Home: React.FC  = () => {
   return (

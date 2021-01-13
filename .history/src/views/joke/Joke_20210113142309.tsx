@@ -1,9 +1,7 @@
 import React  from 'react';
 import { useParams } from "react-router";
 
-import Wrapper   from '../../shared/Wrapper/Wrapper';
-import NavBar    from '../../components/NavBar/NavBar';
-import ChuckJoke from '../../components/ChuckJoke/ChuckJoke';
+import Wrapper from '../../shared/Wrapper/Wrapper';
 interface ParamTypes {
   category: string
 }
@@ -13,8 +11,7 @@ const Joke = () => {
 
   return (
     <Wrapper>
-      <NavBar category={category} />
-      <ChuckJoke />
+      ola
     </Wrapper>
   );
 };

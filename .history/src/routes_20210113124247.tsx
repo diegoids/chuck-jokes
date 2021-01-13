@@ -5,10 +5,8 @@ import {
   Route 
 } from 'react-router-dom';
 
-export const ROUTES = {
-  HOME: '/',
-  JOKE: '/joke'
-}
+const ROUTE_HOME = '/';
+const ROUTE_JOKE = '/joke/:category';
 
 const Home = lazy(() => import('./views/home/Home'));
 const Joke = lazy(() => import('./views/joke/Joke'));
@@ -17,8 +15,8 @@ const Routes = () => (
   <Router>
     <Suspense fallback={(<div>loading</div>)}>
       <Switch>
-        <Route path={ ROUTES.HOME } exact component={ Home } />
-        <Route path={ `${ROUTES.JOKE}/:category` } exact component={ Joke } />
+        <Route path={ ROUTE_HOME } exact component={ Home } />
+        <Route path={ ROUTE_JOKE } exact component={ Joke } />
         <Route path="*" component={ Home }
         />
       </Switch>
