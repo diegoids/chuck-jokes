@@ -2,9 +2,15 @@ import React from 'react';
 
 import './Wrapper.style.scss';
 
-const Wrapper: React.FC = ({ children }) => {
+interface Props {
+  className?: string
+}
+
+const Wrapper: React.FC<Props> = ({ children, className }) => {
+  const compClass = `app-wrapper ${!!className ? className : ''}`
+  
   return (
-    <main className="app-wrapper">
+    <main className={ compClass }>
       { children }
     </main>
   );

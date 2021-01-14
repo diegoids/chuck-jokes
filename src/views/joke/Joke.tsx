@@ -31,18 +31,27 @@ const Joke = () => {
     handleJoke();
   }, [handleJoke]);
 
-  if( loading ) return <Loading />;
-
   if( error ) return (
     <div>Error</div>
   )
 
   return (
-    <Wrapper>
+    <Wrapper className={ 'page-joke' }>
       <NavBar category={category} />
-      <ChuckJoke joke={data} />
       
-      <Button onClick={handleJoke} label={ 'Another one...' } layout={'secundary'} />
+      { 
+        loading
+          ? <Loading />
+          : (
+            <>
+              <ChuckJoke joke={data} />
+
+              <div className="page-joke__btn-wrapper">
+                <Button onClick={handleJoke} label={ 'Another one...' } layout={'secundary'} />
+              </div>
+            </>
+          )
+      }
     </Wrapper>
   );
 };

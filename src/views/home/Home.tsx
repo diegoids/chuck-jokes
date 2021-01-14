@@ -20,8 +20,6 @@ const Home: React.FC  = () => {
     handleCategory(); 
   }, [handleCategory]);
 
-  if( loading ) return <Loading />;
-
   if( error ) return (
     <div>Error</div>
   )
@@ -30,7 +28,11 @@ const Home: React.FC  = () => {
     <main>
       <Wrapper>
         <Intro />
-        <CategoriesList categories={data} />
+        {
+          loading
+            ? <Loading />
+            : <CategoriesList categories={data} />
+        }
       </Wrapper>
     </main>
   );
